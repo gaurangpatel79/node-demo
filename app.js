@@ -9,7 +9,7 @@ var auth = require('./routes/auth');
 var app = express();
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb+srv://reachout:hoqumS9fjIsCGc8K@reachoutcluster-kalmu.mongodb.net/mern-secure?retryWrites=true', { promiseLibrary: require('bluebird') })
+mongoose.connect('mongodb+srv://reachout:hoqumS9fjIsCGc8K@reachoutcluster-kalmu.mongodb.net/mern-secure?retryWrites=true', { promiseLibrary: require('bluebird'),  useNewUrlParser: true  })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
